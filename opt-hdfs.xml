@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+</configuration>
+<property><name>dfs.replication</name><value>2</value></property>
+<property><name>dfs.blocksize</name><value>268435456</value></property> <!-- 256 MB -->
+<property><name>dfs.datanode.data.dir</name><value>/data1/dn,/data2/dn</value></property>
