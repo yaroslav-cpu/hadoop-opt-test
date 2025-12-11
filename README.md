@@ -4,7 +4,7 @@
 
 ## 一键复现
 ```bash
-git clone https://github.com/用户名/hadoop-opt-test.git
+git clone https://github.com/yaroslav-cpu/hadoop-opt-test.git
 cd hadoop-opt-test
 # 应用优化配置
 cp opt-hdfs.xml   $HADOOP_HOME/etc/hadoop/hdfs-site.xml
