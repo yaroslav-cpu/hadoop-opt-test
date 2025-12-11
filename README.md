@@ -2,7 +2,7 @@
 教学项目：Hadoop 3.3.4 性能优化脚本  
 一键复现 1 GB WordCount
 
-## 一键复现
+## 复现
 ```bash
 git clone https://github.com/yaroslav-cpu/hadoop-opt-test.git
 cd hadoop-opt-test
