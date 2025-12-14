@@ -2,7 +2,7 @@
 git clone https://github.com/yaroslav-cpu/hadoop-opt-test.git
 cd hadoop-opt-test
 
-# 2. 把优化配置拷进 Hadoop（如想测优化版）
+# 2. 把优化配置拷进 Hadoop
 cp opt-hdfs.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 cp opt-mapred.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
 stop-dfs.sh && start-dfs.sh
