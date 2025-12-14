@@ -8,7 +8,7 @@ cp opt-mapred.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
 stop-dfs.sh && start-dfs.sh
 
 # 3. 上传数据到 /input/nba/nba_1g.csv
-hdfs dfs -put <你的文件> /input/nba/nba_1g.csv
+hdfs dfs -put nba_1g.csv /input/nba/nba_1g.csv
 
 # 4. 跑默认配置
 bash run-benchmark.sh default
