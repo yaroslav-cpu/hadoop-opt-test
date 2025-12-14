@@ -1,13 +1,17 @@
-# Hadoop Opt Test
-教学项目：Hadoop 3.3.4 性能优化脚本  
-一键复现 1 GB WordCount
-
-## 复现
-```bash
+# 1. 克隆脚本
 git clone https://github.com/yaroslav-cpu/hadoop-opt-test.git
 cd hadoop-opt-test
-# 应用优化配置
-cp opt-hdfs.xml   $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+
+# 2. 把优化配置拷进 Hadoop（如想测优化版）
+cp opt-hdfs.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 cp opt-mapred.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
-# 跑分
-./run-benchmark.sh
+stop-dfs.sh && start-dfs.sh
+
+# 3. 上传数据到 /input/nba/nba_1g.csv
+hdfs dfs -put <你的文件> /input/nba/nba_1g.csv
+
+# 4. 跑默认配置
+bash run-benchmark.sh default
+
+# 5. 跑优化配置
+bash run-benchmark.sh opt
