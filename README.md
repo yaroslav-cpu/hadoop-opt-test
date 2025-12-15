@@ -1,17 +1,10 @@
-# 1. 克隆脚本
-git clone https://github.com/yaroslav-cpu/hadoop-opt-test.git
-cd hadoop-opt-test
-
-# 2. 把优化配置拷进 Hadoop
-cp opt-hdfs.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-cp opt-mapred.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
-stop-dfs.sh && start-dfs.sh
-
-# 3. 上传数据到 /input/nba/nba_1g.csv
-hdfs dfs -put nba_1g.csv /input/nba/nba_1g.csv
-
-# 4. 跑默认配置
-bash run-benchmark.sh default
-
-# 5. 跑优化配置
-bash run-benchmark.sh opt
+## 前提
+- 已启动 Hadoop 集群（3 节点即可）
+- `/input/nba_1g.csv` 已存在（任意 1 GB 文本）
+- `HADOOP_HOME` 已配置
+  
+## 使用
+```bash
+wget https://raw.githubusercontent.com/yaroslav-cpu/hadoop-opt-test/main/run-benchmark.sh
+chmod +x run-benchmark.sh
+./run-benchmark.sh
